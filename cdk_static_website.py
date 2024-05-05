@@ -15,7 +15,8 @@ class MyStaticWebsiteStack(TerraformStack):
                                   bucket='my-static-website-bucket',
                                   acl='public-read',
                                   website_index_document='index.html',
-                                  website_error_document='error.html')
+                                  website_error_document='error.html',
+                                  website=True)
 
 app = App()
 MyStaticWebsiteStack(app, "my-static-website-stack")
